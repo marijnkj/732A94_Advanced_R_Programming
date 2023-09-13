@@ -1,7 +1,7 @@
 \name{euclidian}
 \alias{euclidian}
 %- Also NEED an '\alias' for EACH other topic documented here.
-\title{
+\title{Euclidian
 %%  ~~function to do ... ~~
 }
 \description{

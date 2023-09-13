@@ -3,7 +3,8 @@ Type: Package
 Title: This package contains two functions, Euclidian and Dijkstra, that allow the user to calculate the greatest common divisor of two numbers, and implement Dijkstra's algorithm on a graph, respectively.
 Version: 1.0
 Date: 2023-09-13
-Author: Max Björklund & Marijn Jaarsma
-Maintainer: maxbj107@student.liu.se, marja987@student.liu.se
+Author: c(
+  person("Max", "Björklund", email="maxbj107@student.liu.se", role=c("aut", "cre"),
+  person("Marijn", "Jaarsma", email="marja987@student.liu.se", role=c("aut")))
 Description: The functions provided by this package are implementations of two famous algorithms. The Euclidean algorithm will find the greatest common divisor of two integers by performing division-with-remainder. The Dijkstra algorithm takes a graph and a starting node, and will find the shortest distance to every other node in the graph.
 License: use_mit_license()
