@@ -1,4 +1,5 @@
 dijkstra <- function(graph, init_node) {
+  # Bug from Simon: build in a check that each edge is represented twice with the same weight!
   # https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
   if (!is.data.frame(graph) | !all(c("v1", "v2", "w") %in% colnames(graph)) | !is.numeric(init_node) | length(init_node) != 1) {
     stop("Check your variables! graph must be a data.frame with columns v1, v2, and w, and init_node a scalar value.")
@@ -10,24 +11,23 @@ dijkstra <- function(graph, init_node) {
     # Start with all infinite distances except at the source node
     v_dist <- replicate(n=(length(unique(graph$v1))), Inf)
     v_dist[init_node] <- 0
+    names(v_dist) <- unique(graph$v1)
     
-    for (edge_row in rownames(filter(graph, v1 == init_node))) { # https://stackoverflow.com/questions/2370515/how-to-get-row-index-number-in-r
-      node_to <- graph[edge_row, "v2"]
-      weight <- graph[edge_row, "w"]
-      v_dist[node_to] <- weight
-    }
+    v_points <- unique(graph$v1) # To use in while loop
     
-    
+    while (length(v_points) > 0) {
+      # https://stackoverflow.com/questions/9390749/return-index-of-the-smallest-value-in-a-vector
+      # https://stackoverflow.com/questions/32403700/name-of-the-minimum-value-in-a-named-vector
+      min_point <- names(v_dist[v_points])[which.min(v_dist[v_points])] 
+      v_points <- v_points[v_points != min_point] 
       
+      for (neighbour_point in graph[graph$v1 == min_point, "v2"]) {
+        new_dist <- v_dist[min_point] + graph[graph$v1 == min_point & graph$v2 == neighbour_point, "w"]
+        if (new_dist < v_dist[neighbour_point]) {
+          v_dist[neighbour_point] <- new_dist
+        }
+      }
     }
-    
-    for node %in% unique(graph$v1) {
-      
-    }
+    return(v_dist)
   }
 }
-
-graph <-
-  data.frame(v1=c(1,1,1,2,2,2,3,3,3,3,4,4,4,5,5,6,6,6),
-             v2=c(2,3,6,1,3,4,1,2,4,6,2,3,5,4,6,1,3,5),
-             w=c(7,9,14,7,10,15,9,10,11,2,15,11,6,6,9,14,2,9))
