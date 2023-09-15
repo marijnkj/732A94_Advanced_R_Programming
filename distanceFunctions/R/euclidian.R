@@ -1,3 +1,19 @@
+#' Compute GCD using the Euclidian algorithm
+#' 
+#' ´euclidian()´ calculates the greatest common devisor (GCD),
+#' of two scalar values.
+#' 
+#' @param x First input scalar numeric value.
+#' @param y Second input scalar numeric value.
+#' @returns The greatest common divisor between x and y, a numeric value.
+#' @examples
+#' euclidian(252,105)
+#' @details
+#' https://en.wikipedia.org/wiki/Euclidean_algorithm
+#' 
+#' @export
+
+
 euclidian <-
 function(x, y) {
   # https://en.wikipedia.org/wiki/Euclidean_algorithm
