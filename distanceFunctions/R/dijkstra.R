@@ -1,3 +1,18 @@
+#' Implements the Dijktra algorithm to find the shortest distance between a
+#' starting node and all other nodes in a graph. The algorithm works by
+#' specifying an initial node from which to start searching. From here, it will
+#' find all the node's neighbours and record their distances to the initial
+#' node. This also happens for the neighbours of the neighbours, now adding the
+#' distances of multiple edges and only recording the distance if it is smaller
+#' than a distance that may have already been found. More information can be 
+#' found on https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm. 
+#' @param graph A data.frame containing a row for each edge with the starting
+#' node, ending node, and weight of the edge.
+#' @param init_node A single number that identifies which node should be 
+#' considered the initial node.
+#' @returns A vector containing the distance to the initial node of each node
+#' in the graph.
+
 dijkstra <-
 function(graph, init_node) {
   # Bug from Simon: build in a check that each edge is represented twice with the same weight!
