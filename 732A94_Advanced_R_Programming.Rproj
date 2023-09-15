@@ -14,6 +14,6 @@ LaTeX: pdfLaTeX
 
 BuildType: Package
 PackageUseDevtools: Yes
-PackagePath: C:/Users/student/Documents/732A94_Advanced_R_Programming/distanceFunctions
+PackagePath: C:/Users/maxib/Documents/732A94_Advanced_R_Programming/distanceFunctions
 PackageInstallArgs: --no-multiarch --with-keep.source
 PackageRoxygenize: rd,collate,namespace,vignette
