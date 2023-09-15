@@ -1,1 +1,1 @@
-export("dijkstra", "euclidian")
+export("dijkstra", "euclidean")
