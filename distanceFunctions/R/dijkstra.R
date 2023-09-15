@@ -1,3 +1,5 @@
+#' Dijkstra Algorithm
+#' 
 #' Implements the Dijktra algorithm to find the shortest distance between a
 #' starting node and all other nodes in a graph. The algorithm works by
 #' specifying an initial node from which to start searching. From here, it will
