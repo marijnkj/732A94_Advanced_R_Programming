@@ -1,7 +1,7 @@
 Package: distanceFunctions
 Type: Package
 Encoding: UTF-8
-Title: This package contains two functions, Euclidian and Dijkstra, that allow the user to calculate the greatest common divisor of two numbers, and implement Dijkstra's algorithm on a graph, respectively.
+Title: Distance Functions
 Version: 1.0
 Date: 2023-09-13
 Author: c(
