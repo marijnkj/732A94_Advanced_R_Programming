@@ -24,6 +24,8 @@ specifying an initial node from which to start searching. From here, it will
 find all the node's neighbours and record their distances to the initial
 node. This also happens for the neighbours of the neighbours, now adding the
 distances of multiple edges and only recording the distance if it is smaller
-than a distance that may have already been found. More information can be 
-found on https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm.
+than a distance that may have already been found.
+}
+\references{
+\url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 }

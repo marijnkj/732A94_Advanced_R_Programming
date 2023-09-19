@@ -18,8 +18,8 @@ The greatest common divisor between x and y, a numeric value.
 ´euclidean()´ calculates the greatest common devisor (GCD),
 of two scalar values.
 }
-\details{
-https://en.wikipedia.org/wiki/Euclidean_algorithm
+\references{
+\url{https://en.wikipedia.org/wiki/Euclidean_algorithm}
 }
 \examples{
 euclidean(252,105)

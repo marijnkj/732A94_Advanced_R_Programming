@@ -10,5 +10,5 @@ Author@R: c(
 Author: Max Björklund [aut, cre], Marijn Jaarsma [aut]
 Maintainer: Max Björklund <maxbj107@student.liu.se>
 Description: The functions provided by this package are implementations of two famous algorithms. The Euclidean algorithm will find the greatest common divisor of two integers by performing division-with-remainder. The Dijkstra algorithm takes a graph and a starting node, and will find the shortest distance to every other node in the graph.
-License: use_mit_license()
+License: MIT + file LICENSE
 RoxygenNote: 7.2.3

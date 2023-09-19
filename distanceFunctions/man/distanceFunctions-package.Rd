@@ -25,5 +25,5 @@ Maintainer: \packageMaintainer{distanceFunctions}
 }
 \references{
 \url{https://en.wikipedia.org/wiki/Euclidean_algorithm}
-\url{https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm}
+\url{https://en.wikipedia.org/wiki/Dijkstra\%27s_algorithm}
 }
