@@ -40,7 +40,7 @@ function(graph, init_node) {
       v_points <- v_points[v_points != min_point] 
       
       for (neighbour_point in graph[graph$v1 == min_point, "v2"]) {
-        new_dist <- v_dist[min_p %>% oint] + graph[graph$v1 == min_point & graph$v2 == neighbour_point, "w"]
+        new_dist <- v_dist[min_point] + graph[graph$v1 == min_point & graph$v2 == neighbour_point, "w"]
         if (new_dist < v_dist[neighbour_point]) {
           v_dist[neighbour_point] <- new_dist
         }
