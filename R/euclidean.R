@@ -21,17 +21,18 @@ function(x, y) {
     stop("Check your variables! x and y must be scalar values.")
   }
   else {
+    x <- abs(x)
+    y <- abs(y)
+    
     a = max(x, y)
     b = min(x, y)
     while (a != b) {
       # Will only run if a is greater than b
       while (a > b) {
-        rem <- a %% b
         a <- a - b
       }
       # Will only run if b is greater than a
       while (b > a) {
-        rem <- b %% a
         b <- b - a
       }
     }

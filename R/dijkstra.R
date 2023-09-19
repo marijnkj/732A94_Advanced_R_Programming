@@ -17,9 +17,8 @@
 
 dijkstra <-
 function(graph, init_node) {
-  # Bug from Simon: build in a check that each edge is represented twice with the same weight!
   # https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
-  if (!is.data.frame(graph) | !all(c("v1", "v2", "w") %in% colnames(graph)) | !is.numeric(init_node) | length(init_node) != 1) {
+  if (!is.data.frame(graph) | !all(c("v1", "v2", "w") %in% colnames(graph)) | !is.numeric(init_node) | length(init_node) != 1 | init_node > length(unique(graph$v1))) {
     stop("Check your variables! graph must be a data.frame with columns v1, v2, and w, and init_node a scalar value.")
   }
   else {
